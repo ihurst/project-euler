@@ -2,11 +2,17 @@ import sympy
 
 def primeFactors(n):
     factors = []
-    primes = list(sympy.primerange(3,n/2))
-    print("Primes Length: " + str(len(primes)))
+    primes = sympy.primerange(3, n/2)
+    print("Prime Generator Ready...")
     for f in primes:
-        if(isFactor(n, f)):
+
+        while isFactor(n, f):
             factors.append(f)
+            n = n/f
+
+        if(n==1):
+            return factors
+
     return factors
 
 def isFactor(n, factor):
@@ -16,3 +22,5 @@ def isFactor(n, factor):
 
 
 print(primeFactors(13195) == [5,7,13,29])
+
+print(primeFactors(600851475143))
