@@ -1,7 +1,11 @@
-total = 0
+def attempt1(n):
+    total = 0
 
-for i in range(1000):
-    if i%3==0 or i%5==0:
-        total+=i
+    for i in range(n):
+        if i%3==0 or i%5==0:
+            total+=i
 
-print("Total: " + str(total))
+    return total
+
+print(attempt1(10) == 23)
+print(attempt1(1000))
