@@ -12,11 +12,11 @@ def fib(n):
         prev2 = 2
         return 2
     else:
-        if prev1 is None and prev2 is None:
+        if prev is None and prev2 is None:
             return fib(n - 2) + fib(n - 1)
 
-        val = prev1 + prev2
-        prev1 = prev2
+        val = prev + prev2
+        prev = prev2
         prev2 = val
 
         return val
@@ -32,6 +32,7 @@ def calculate():
         if val%2 == 0:
             total += val
     return total
+
 
 def calculate2():
     data = [1,2]
