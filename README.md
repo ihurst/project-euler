@@ -1,4 +1,4 @@
 project-euler
 =============
 
-My solutions to project euler problem (different languages)
+My solutions to project euler problems in python
